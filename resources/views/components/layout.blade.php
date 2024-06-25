@@ -388,7 +388,7 @@
                         </h4>
 
                         <p class="stext-107 cl7 size-201">
-                            Tienes alguna pregunta ?
+                            ¿ Tienes alguna pregunta ?
                         </p>
 
                         <div class="p-t-27">
