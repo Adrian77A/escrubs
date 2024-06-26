@@ -100,9 +100,9 @@
                 container: card/inline-size;
             }
 
-            .article-body p {
+            /* .article-body p {
                 display: none;
-            }
+            } */
         }
 
         @container card (min-width: 380px) {
