@@ -145,7 +145,11 @@
             <article>
                 <div class="article-wrapper">
                     <figure style="align-content: center; text-align:center">
-                        <img src="{{ asset('storage/banners/doctor.png')}}" alt="{{$item->name}}" />
+                        @if ($item->name == 'Adrian Aguilar')
+                            <img src="{{ asset('storage/banners/doctor_adrian.png')}}" alt="{{$item->name}}" />
+                            @else 
+                            <img src="{{ asset('storage/banners/doctor.png')}}" alt="{{$item->name}}" />
+                        @endif
                     </figure>
                     <div class="article-body">
                         <h2>{{$item->name}}</h2>
