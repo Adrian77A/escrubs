@@ -187,9 +187,9 @@
 										<b>{{$item_data->name}}</b>
 									</a>
 
-									<span class="stext-105 cl3" style="font-size: 21px;color:black">
+									{{-- <span class="stext-105 cl3" style="font-size: 21px;color:black">
 										$ {{$item_data->price}}
-									</span>
+									</span> --}}
 								</div>
 
 								<div class="block2-txt-child2 flex-r p-t-3">
