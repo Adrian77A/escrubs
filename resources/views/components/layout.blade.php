@@ -40,11 +40,12 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta name="language" content="Spanish">
         <meta property="og:image" content="{{ asset('storage/images/icons/logo-01.png')}}">
-
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 
     <body class="animsition">
+        <a href="https://wa.me/527751502207?text=Buen%20día%20me%20gustaría%20saber%20el%20precio%20del%20producto:%20" class="whatsapp" target="_blank"> <i class="fa fa-whatsapp whatsapp-icon"></i></a>
 
         <!-- Header -->
         <header>
