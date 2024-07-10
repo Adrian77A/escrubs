@@ -269,7 +269,7 @@
 									@if(is_array($images))
 										@foreach($images as $key_image => $image)
 											@if ($loop->first)
-												<a href="https://wa.me/527751502207?text=Buen%20día%20me%20gustaría%20saber%20el%20precio%20del%20producto:%20" target="_blank"> 
+												<a href="https://wa.me/527751502207?text={{ urlencode('Buen día me gustaría saber el precio del producto: ' . $item_data->name . ' sku: ' . $item_data->sku .' Categoria: ' . $item_data->category->name) }}" target="_blank"> 
 													<img src="{{ asset('storage') . '/'. $image }}" alt="{{$image}}">
 												</a>
 											@endif
@@ -423,23 +423,23 @@
 
 									@endif --}}
 								</div>
-								<div class="block2-txt flex-w flex-t p-t-14">
-									<div class="block2-txt-child1 flex-col-l ">
-										<a href="#" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6" style="font-size: 15px; color:black">
-											<b>{{$item_data->name}}</b>
-										</a>
+									<div class="block2-txt flex-w flex-t p-t-14">
+										<div class="block2-txt-child1 flex-col-l ">
+											<a href="https://wa.me/527751502207?text={{ urlencode('Buen día me gustaría saber el precio del producto: ' . $item_data->name . ' sku: ' . $item_data->sku .' Categoria: ' . $item_data->category->name) }}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6" target="_blank" style="font-size: 15px; color:black">
+												<b>{{$item_data->name}}</b>
+											</a>
 
-										{{-- <span class="stext-105 cl3" style="font-size: 21px;color:black">
-											$ {{$item_data->price}}
-										</span> --}}
+											{{-- <span class="stext-105 cl3" style="font-size: 21px;color:black">
+												$ {{$item_data->price}}
+											</span> --}}
+										</div>
+										<div class="block2-txt-child2 flex-r p-t-3">
+											<a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
+												<img class="icon-heart1 dis-block trans-04" src="{{ asset('storage/images/icons/icon-heart-01.png')}}" alt="ICON">
+												<img class="icon-heart2 dis-block trans-04 ab-t-l" src="{{ asset('storage/images/icons/icon-heart-02.png')}}" alt="ICON">
+											</a>
+										</div>
 									</div>
-									<div class="block2-txt-child2 flex-r p-t-3">
-										<a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-											<img class="icon-heart1 dis-block trans-04" src="{{ asset('storage/images/icons/icon-heart-01.png')}}" alt="ICON">
-											<img class="icon-heart2 dis-block trans-04 ab-t-l" src="{{ asset('storage/images/icons/icon-heart-02.png')}}" alt="ICON">
-										</a>
-									</div>
-								</div>
 							
 							</div>
 						
