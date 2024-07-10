@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
@@ -14,8 +15,9 @@ class HomeController extends Controller
         $request->routeStatistics(); // This will enable route statistics logging
 
         $data = Product::Status()->select('id','category_id','name','price','stock','img','description','sku','color')->with('category')->get();
-        // dd($data);
-        return view('home.home', compact('data'));
+        $name_categories = Category::get('name');
+
+        return view('home.home', compact('data', 'name_categories'));
     }
 
 

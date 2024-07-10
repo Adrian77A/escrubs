@@ -58,3 +58,7 @@ Route::get('/catalogo/estetos/2024', function () {
 Route::get('/catalogo/enfermedic/2024', function () {
     return view('catalogs.enfermedic');
 })->name('catalog_enfermedic');
+
+Route::get('/gracias', function () {
+    return view('information.thank');
+})->name('thank_page');
