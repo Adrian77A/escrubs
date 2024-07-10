@@ -239,7 +239,7 @@
                         <button class="flex-c-m trans-04">
                             <i class="zmdi zmdi-search"></i>
                         </button>
-                        <input class="plh3" type="text" name="search" placeholder="Search...">
+                        <input class="plh3" type="text" name="search" id="search" placeholder="Buscar...">
                     </form>
                 </div>
             </div>
@@ -493,7 +493,7 @@
             $('.js-addwish-b2').each(function(){
                 var nameProduct = $(this).parent().parent().find('.js-name-b2').html();
                 $(this).on('click', function(){
-                    swal(nameProduct, "is added to wishlist !", "success");
+                    swal(nameProduct, "Agregada a lista de deseos !", "success");
 
                     $(this).addClass('js-addedwish-b2');
                     $(this).off('click');
@@ -504,7 +504,7 @@
                 var nameProduct = $(this).parent().parent().parent().find('.js-name-detail').html();
 
                 $(this).on('click', function(){
-                    swal(nameProduct, "is added to wishlist !", "success");
+                    swal(nameProduct, "Agregada a lista de deseos !", "success");
 
                     $(this).addClass('js-addedwish-detail');
                     $(this).off('click');

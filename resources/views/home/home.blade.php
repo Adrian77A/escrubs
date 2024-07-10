@@ -425,13 +425,14 @@
 								</div>
 									<div class="block2-txt flex-w flex-t p-t-14">
 										<div class="block2-txt-child1 flex-col-l ">
-											<a href="https://wa.me/527751502207?text={{ urlencode('Buen día me gustaría saber el precio del producto: ' . $item_data->name . ' sku: ' . $item_data->sku .' Categoria: ' . $item_data->category->name) }}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6" target="_blank" style="font-size: 15px; color:black">
+											<a href="https://wa.me/527751502207?text={{ urlencode('Buen día me gustaría saber el precio del producto: ' . $item_data->name . ' sku: ' . $item_data->sku .' Categoria: ' . $item_data->category->name) }}" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6" target="_blank" style="font-size: 26px; color:black;font-family:Bebas Neue, cursive">
 												<b>{{$item_data->name}}</b>
 											</a>
 
-											{{-- <span class="stext-105 cl3" style="font-size: 21px;color:black">
-												$ {{$item_data->price}}
-											</span> --}}
+											<span class="stext-105 cl3" style="font-size: 14px;color:black">
+												{{$item_data->description ?? '' }}
+											</span>
+
 										</div>
 										<div class="block2-txt-child2 flex-r p-t-3">
 											<a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
