@@ -7,7 +7,11 @@
 	<!-- Sliders -->
 	 <livewire:home.banner />
 
-
+	 <style>
+        #canvas {
+            border: 1px solid black;
+        }
+    </style>
 	<!-- Banner -->
 	<div class="sec-banner bg0 p-t-80 p-b-50">
 		<div class="container">
@@ -270,7 +274,7 @@
 										@foreach($images as $key_image => $image)
 											@if ($loop->first)
 												<a href="https://wa.me/527751502207?text={{ urlencode('Buen día me gustaría saber el precio del producto: ' . $item_data->name . ' sku: ' . $item_data->sku .' Categoria: ' . $item_data->category->name) }}" target="_blank"> 
-													<img src="{{ asset('storage') . '/'. $image }}" alt="{{$image}}">
+													<img src="{{ asset('storage') . '/'. $image }}" alt="{{$image}}"  width="200" height="400">
 												</a>
 											@endif
 										@endforeach

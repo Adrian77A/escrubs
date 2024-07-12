@@ -76,9 +76,9 @@ class ProductResource extends Resource
                         ->image()
                         ->multiple()
                         ->directory('product')
-                        ->image()
+                        ->imageResizeTargetWidth('1545')
+                        ->imageResizeTargetHeight('2000')
                         ->uploadingMessage('Imagen cargando...')
-                        ->imageEditor()
                         ->imageEditorEmptyFillColor('#000000')
                         ->reorderable()
                         ->openable()
@@ -137,7 +137,8 @@ class ProductResource extends Resource
                 Tables\Columns\TextColumn::make('sku')
                     ->searchable()
                     ->sortable(),
-                ImageColumn::make('img'),
+                ImageColumn::make('img')
+                    ->square(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
