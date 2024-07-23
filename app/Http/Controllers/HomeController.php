@@ -14,7 +14,7 @@ class HomeController extends Controller
     {
         $request->routeStatistics(); // This will enable route statistics logging
 
-        $data = Product::Status()->select('id','category_id','name','price','stock','img','description','sku','color')->with('category')->get();
+        $data = Product::orderBy('created_at', 'desc')->Status()->select('id','category_id','name','price','stock','img','description','sku','color')->with('category')->paginate(8);
         $name_categories = Category::get('name');
 
         return view('home.home', compact('data', 'name_categories'));

@@ -1,10 +1,37 @@
 <div>
+	<style>
+		#background-video {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transform: translate(-50%, -50%);
+			z-index: -1;
+			opacity: 0.75; /* Ajusta la opacidad según lo necesites */
+		}
+		.video-background {
+			position: relative;
+			width: 100%;
+			height: 100vh; /* O ajusta esta altura según tus necesidades */
+			overflow: hidden;
+		}
+	</style>
 	<!-- Slider -->
 	<section class="section-slide">
 		<div class="wrap-slick1">
 			<div class="slick1">
 				@foreach ($this->get_banners as $item)
-					<div class="item-slick1" style="background-image: url({{ asset('storage/' . $item->img)}}); opacity:0.75;">
+					@if ($item->title == 'video')
+						<div class="item-slick1">
+							<video width="640" height="360" autoplay controls muted loop id="background-video">
+								<source src="{{ asset('storage/'.$item->img)}}" type="video/mp4">
+								Tu navegador no soporta el video.
+							</video>
+							@else
+							<div class="item-slick1" style="background-image: url({{ asset('storage/' . $item->img)}}); opacity:0.75;">
+					@endif
 						<div class="container h-full">
 							<div class="flex-col-l-m h-full p-t-100 p-b-30 respon5">
 								<div class="layer-slick1 animated visible-false" data-appear="rotateInDownLeft" data-delay="0">

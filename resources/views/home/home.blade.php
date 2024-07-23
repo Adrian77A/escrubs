@@ -8,9 +8,37 @@
 	 <livewire:home.banner />
 
 	 <style>
-        #canvas {
-            border: 1px solid black;
-        }
+		 #canvas {
+			border: 1px solid black;
+		}
+		.pagination {
+			display: flex;
+			justify-content: center;
+			list-style: none;
+			padding: 0;
+		}
+		.pagination .page-item {
+			margin: 0 5px;
+		}
+		.pagination .page-link {
+			color: rgb(251, 227, 209);
+			background-color: #e83e8c;
+			border: 1px solid #dee2e6;
+			padding: 0.5rem 0.75rem;
+			text-decoration: none;
+		}
+		.pagination .page-item.active .page-link {
+			color: #e83e8c;
+			background-color: rgb(251, 227, 209);;
+			border-color: rgb(251, 227, 209);;
+		}
+
+		.pagination .page-item.disabled .page-link {
+			color: #6c757d;
+			pointer-events: none;
+			background-color: #e83e8c;
+			border: 1px solid #dee2e6;
+		}
     </style>
 	<!-- Banner -->
 	<div class="sec-banner bg0 p-t-80 p-b-50">
@@ -104,7 +132,7 @@
 					Productos
 				</h3>
 			</div>
-			<div class="flex-w flex-sb-m p-b-52">
+			<div class="flex-w flex-sb-m p-b-52" id="filtro-productos">
 				<div class="flex-w flex-l-m filter-tope-group m-tb-10">
 					<button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 how-active1" data-filter="*">
 						Todos los productos
@@ -255,7 +283,6 @@
 					</div>
 				</div>
 			</div>
-
 
 			{{-- @livewire('product.product') --}}
 			<div class="row isotope-grid" id="product">
@@ -451,31 +478,37 @@
 
 					</div>
 				@endforeach
-				
 			</div>
 
-			
-
-			<!-- Load more -->
-			{{-- <div class="flex-c-m flex-w w-full p-t-45">
-				<a href="#" class="flex-c-m stext-101 cl5 size-103 bg2 bor1 hov-btn1 p-lr-15 trans-04">
-					Load More
-				</a>
-			</div> --}}
-
 		</div>
+
+		<!-- Enlaces de paginación -->
+		<nav>
+			<ul class="pagination">
+				@if ($data->onFirstPage())
+					<li class="page-item disabled"><span class="page-link">Anterior</span></li>
+				@else
+					<li class="page-item"><a class="page-link" href="{{ $data->previousPageUrl() }}#filtro-productos">Anterior</a></li>
+				@endif
+
+				@foreach ($data->getUrlRange(1, $data->lastPage()) as $page => $url)
+					@if ($page == $data->currentPage())
+						<li class="page-item active"><span class="page-link">{{ $page }}</span></li>
+					@else
+						<li class="page-item"><a class="page-link" href="{{ $url }}#filtro-productos">{{ $page }}</a></li>
+					@endif
+				@endforeach
+
+				@if ($data->hasMorePages())
+					<li class="page-item"><a class="page-link" href="{{ $data->nextPageUrl() }}#filtro-productos">Siguiente</a></li>
+				@else
+					<li class="page-item disabled"><span class="page-link">Siguiente</span></li>
+				@endif
+			</ul>
+		</nav>
+
 	</section>
 
-
-	<!-- Back to top -->
-	<div class="btn-back-to-top" id="myBtn">
-		<span class="symbol-btn-back-to-top">
-			<i class="zmdi zmdi-chevron-up"></i>
-		</span>
-	</div>
-
-	
-	
 	<!-- Modal1 -->
 	{{-- <div class="wrap-modal1 js-modal1 p-t-60 p-b-20">
 		<div class="overlay-modal1 js-hide-modal1"></div>
