@@ -25,7 +25,7 @@
 				@foreach ($this->get_banners as $item)
 					@if ($item->title == 'video')
 						<div class="item-slick1">
-							<video width="640" height="360" autoplay controls muted loop id="background-video">
+							<video width="640" height="360" autoplay playsinline controls muted loop id="background-video">
 								<source src="{{ asset('storage/'.$item->img)}}" type="video/mp4">
 								Tu navegador no soporta el video.
 							</video>
