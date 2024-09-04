@@ -28,7 +28,7 @@ class HomeController extends Controller
             $color_name = $request->input('color');
             $query->where('color', $color_name);
         }
-        $data = $query->paginate(10);
+        $data = $query->paginate(20);
         $name_categories = Category::orderBy('created_at', 'desc')->get('name');
         $colors_list = ['negro', 'azul', 'gris','verde','rojo','blanco']; // Lista de colores disponibles
 
