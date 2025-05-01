@@ -60,6 +60,7 @@ class ProductResource extends Resource
                     Forms\Components\TextInput::make('stock')
                         ->required()
                         ->minLength(1)
+                        ->default(15)
                         ->maxLength(255)
                         ->label(__('stock'))
                         ->numeric(),
@@ -68,18 +69,21 @@ class ProductResource extends Resource
                         ->minLength(1)
                         ->maxLength(255)
                         ->label(__('price'))
+                        ->default(250)
                         ->numeric(),
                     FileUpload::make('img')
                         ->label(__('img'))
                         ->image()
                         ->multiple()
                         ->directory('product')
+                        ->imageResizeTargetWidth('1545')
+                        ->imageResizeTargetHeight('2000')
+                        ->uploadingMessage('Imagen cargando...')
+                        ->imageEditorEmptyFillColor('#000000')
                         ->reorderable()
-                        ->imageEditor()
                         ->openable()
-                        ->imageEditorEmptyFillColor('#FBE3D1')
-                        ->imageResizeTargetWidth('1200')
-                        ->imageResizeTargetHeight('1480')
+                        // ->imageResizeTargetWidth('1200')
+                        // ->imageResizeTargetHeight('1480')
                         ->required(),
                         ToggleButtons::make('status')
                         ->required()
@@ -133,7 +137,8 @@ class ProductResource extends Resource
                 Tables\Columns\TextColumn::make('sku')
                     ->searchable()
                     ->sortable(),
-                ImageColumn::make('img'),
+                ImageColumn::make('img')
+                    ->square(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()

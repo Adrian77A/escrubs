@@ -43,10 +43,6 @@ class BannerResource extends Resource
                     FileUpload::make('img')
                         ->enableOpen()
                         ->directory('banners')
-                        ->image()
-                        ->imageResizeMode('cover')
-                        ->imageResizeTargetWidth('1920')
-                        ->imageResizeTargetHeight('1080')
                         ->required(),
                     Select::make('status')
                         ->options([
