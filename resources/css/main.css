@@ -217,7 +217,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 [ Top bar ]*/
 .top-bar {
   height: 39px;
-  background-color: #fbe3d1;
+  background-color: #efb6bf;
 }
 
 /*---------------------------------------------*/
@@ -608,7 +608,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 
 .fix-menu-desktop .wrap-menu-desktop {
   height: 70px;
-  background-color: #FBE3D1;
+  background-color: #efb6bf;
   box-shadow: 0 0px 3px 0px rgba(0,0,0,0.2);
   -moz-box-shadow: 0 0px 3px 0px rgba(0,0,0,0.2);
   -webkit-box-shadow: 0 0px 3px 0px rgba(0,0,0,0.2);
@@ -2633,10 +2633,10 @@ input.num-product::-webkit-inner-spin-button {
    BACKGROUND BACKGROUND BACKGROUND BACKGROUND BACKGROUND BACKGROUND 
 ==================================================================*/
 .bg-none {background-color: transparent;}
-.bg0 {background-color: #e9eff4;}
+.bg0 {background-color: #e1cee2;}
 .bg1 {background-color: #717fe0;}
 .bg2 {background-color: #e6e6e6;}
-.bg3 {background-color: #6A0000;}
+.bg3 {background-color: #54684d;}
 .bg5 {background-color: rgba(0,0,0,0.5);}
 .bg6 {background-color: #f2f2f2;}
 .bg7 {background-color: #b8d2d8;}

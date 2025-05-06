@@ -4,6 +4,7 @@
         <title>{{ $title ?? 'Escrubs'}}</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Security-Policy">
     <!--===============================================================================================-->	
         <link rel="icon" type="image/png" href="{{ asset('storage/images/icons/logo-01.png')}}"/>
     <!--===============================================================================================-->
@@ -45,7 +46,7 @@
 
 
     <body class="animsition">
-        <a href="https://wa.me/527751502207?text=Buen%20día%20me%20gustaría%20saber%20el%20precio%20del%20producto:%20" class="whatsapp" target="_blank"> <i class="fa fa-whatsapp whatsapp-icon"></i></a>
+        <a href="https://wa.me/527751502207?text=Buen%20día%20me%20gustaría%20saber%20el%20precio%20del%20producto:%20" class="whatsapp" target="_blank" rel="noopener"> <i class="fa fa-whatsapp whatsapp-icon"></i></a>
 
         <!-- Header -->
         <header>
@@ -434,7 +435,7 @@
                 <div class="p-t-40">
                     <div class="flex-c-m flex-w p-b-18">
                     <p class="stext-107 cl6 txt-center">
-                            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Made by <a href="https://api.whatsapp.com/send?phone=527711610223" target="_blank"> Adrian Aguilar</a>
+                            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Made by <a href="https://api.whatsapp.com/send?phone=527711610223" target="_blank" rel="noopener"> Adrian Aguilar</a>
                     </p>
                 </div>
             </div>

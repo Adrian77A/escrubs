@@ -39,6 +39,12 @@ class ProductResource extends Resource
 
     protected static ?string $navigationGroup = 'Productos';
 
+    public static function getEloquentQuery(): Builder
+    {
+        return parent::getEloquentQuery()
+            ->latest();
+    }
+
     public static function form(Form $form): Form
     {
         return $form
