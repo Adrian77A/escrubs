@@ -30,17 +30,14 @@
             <br>
 			<div class="p-b-10">
 				<h3 class="ltext-103 cl5">
-					Catalogo Estetos 2024
+					Catalogo Estetos 2025
 				</h3>
 			</div>
 		</div>
 	</div>
 
     <div class="iframe-container">
-        <iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;" src="https://online.fliphtml5.com/lhvpg/bgqq/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe>
-        <a href="{{ asset('storage/catalogs/Catalogo_24.pdf')}}" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1" download>
-            Descargar
-        </a>
+        <iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;" src="https://online.fliphtml5.com/lhvpg/fbjt/"  seamless="seamless" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" ></iframe>
     </div>
 
    
